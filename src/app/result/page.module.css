@@ -1,0 +1,337 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.logoIcon {
+  width: 24px;
+  height: 24px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  position: relative;
+}
+
+.logoIcon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--bg-primary);
+  border-radius: 50%;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.topBar {
+  margin-bottom: 2rem;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  transition: var(--transition-fast);
+}
+
+.backBtn:hover {
+  color: var(--text-primary);
+}
+
+.queryTags {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.queryTag {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.queryTagHighlight {
+  color: var(--accent-green);
+  border-color: var(--accent-green-light);
+}
+
+.resultCard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.cardHeader {
+  text-align: center;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  font-weight: 600;
+  position: relative;
+}
+
+.cardHeader::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: var(--border-color);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sectionIcon {
+  color: var(--accent-green);
+  background-color: var(--accent-green-light);
+  padding: 0.5rem;
+  border-radius: var(--radius-full);
+  display: flex;
+}
+
+.listItem {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.listItemHighlight {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+.salaryCard {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.salaryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.salaryRole {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.salaryGrowth {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green-light);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.salaryBarContainer {
+  position: relative;
+  height: 6px;
+  background-color: var(--border-color);
+  border-radius: var(--radius-full);
+  margin: 1rem 0;
+}
+
+.salaryBarFill {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 100%;
+  background-color: var(--accent-green);
+  border-radius: var(--radius-full);
+}
+
+.salaryDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  border: 2px solid var(--bg-input);
+}
+
+.salaryLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.salaryMedian {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+.locations {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.locationTag {
+  background-color: var(--bg-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.roadmapItem {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.roadmapNumber {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--accent-green);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.roadmapContent {
+  flex-grow: 1;
+}
+
+.roadmapTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.roadmapDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.bulletList {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.bulletList li {
+  margin-bottom: 0.5rem;
+}
+
+.bulletList li strong {
+  color: var(--text-primary);
+}
+
+.insightCard {
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 230, 118, 0.2);
+  border-radius: 50%;
+  border-top-color: var(--accent-green);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
